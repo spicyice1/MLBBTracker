@@ -1,0 +1,82 @@
+:root {
+    --bg-main: rgba(10, 10, 15, 0.9);
+    --win-glow: #00ef8b;
+    --loss-glow: #ff4655;
+    --rank-gold: #f3ad14;
+    --text-white: #ffffff;
+    --text-dim: #aaaaaa;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: transparent; /* Essential for OBS */
+    color: var(--text-white);
+    text-transform: uppercase;
+}
+
+.overlay-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: fit-content;
+}
+
+/* Stats Styling */
+.stats-row {
+    display: flex;
+    background-color: var(--bg-main);
+    padding: 10px 20px;
+    border-left: 4px solid var(--text-white);
+    gap: 25px;
+    align-items: center;
+}
+
+.stat-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+}
+
+.value {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.rank-text {
+    color: var(--rank-gold);
+}
+
+/* Match History Styling */
+.history-row {
+    display: flex;
+    gap: 6px;
+}
+
+.match-slot {
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg-main);
+    border-bottom: 3px solid #444;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.match-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Win/Loss Status */
+.match-slot.win { border-bottom-color: var(--win-glow); }
+.match-slot.loss { border-bottom-color: var(--loss-glow); }
