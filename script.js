@@ -1,4 +1,4 @@
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQMSyYdaTIHc7N-z-ZNqyZpdTbREku5KuvBN2z5fMtrECK1nYEcqm5x7ta5Omo9yHnXh4jyt1wd5LTA/pub?gid=1260431574&single=true&output=csv';
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQMSyYdaTIHc7N-z-ZNqyZpdTbREku5KuvBN2z5fMtrECK1nYEcqm5x7ta5Omo9yHnXh4jyt1wd5LTA/pubhtml?gid=1260431574&single=true';
 
 async function fetchStats() {
     Papa.parse(CSV_URL, {
@@ -35,7 +35,7 @@ function updateUI(data) {
             const slot = document.createElement('div');
             
             // Add class 'win' or 'loss'
-            const resultClass = row.Last10Win.toLowerCase() === 'win' ? 'win' : 'loss';
+            const resultClass = row.Last10Result.toLowerCase() === 'win' ? 'win' : 'loss';
             slot.className = `match-slot ${resultClass}`;
 
             const img = document.createElement('img');
