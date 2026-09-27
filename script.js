@@ -1,4 +1,4 @@
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQMSyYdaTIHc7N-z-ZNqyZpdTbREku5KuvBN2z5fMtrECK1nYEcqm5x7ta5Omo9yHnXh4jyt1wd5LTA/pubhtml?gid=1260431574&single=true';
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQMSyYdaTIHc7N-z-ZNqyZpdTbREku5KuvBN2z5fMtrECK1nYEcqm5x7ta5Omo9yHnXh4jyt1wd5LTA/pub?gid=1260431574&single=true&output=csv';
 
 async function fetchStats() {
     Papa.parse(CSV_URL, {
